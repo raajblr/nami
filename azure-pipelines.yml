@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- azure-pipelines
 
 pool:
   vmImage: 'windows-latest' # 'ubuntu-latest'
@@ -18,8 +18,8 @@ steps:
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    goals: 'package'
+    testResultsFiles: '**/*-tests.xml'
+    goals: 'test'
 - script: |
     echo Starting the build
     mvn package
