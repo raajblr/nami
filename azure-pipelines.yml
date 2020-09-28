@@ -17,9 +17,9 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
+    publishJUnitResults: false
     testResultsFiles: '*-tests.xml'
-    goals: 'package'
+    goals: 'compile'
 - script: |
     echo Starting the build
     mvn package
