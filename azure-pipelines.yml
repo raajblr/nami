@@ -12,13 +12,15 @@ pool:
 steps:
 - task: Maven@3
   inputs:
+    mavenSetM2Home: true
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+    mavenDirectory: 'D:\mavenDir'
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: false    
+    publishJUnitResults: false
     goals: 'test'
 - script: |
     echo Starting the build
