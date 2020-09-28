@@ -17,6 +17,7 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenDirectory: 'D:\mavenDir'
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    jdkDirectory: 'C:\Program Files\Java\jdk8u265-b01'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
