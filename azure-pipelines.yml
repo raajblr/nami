@@ -14,11 +14,11 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '*-tests.xml'
+    publishJUnitResults: false    
     goals: 'test'
 - script: |
     echo Starting the build
